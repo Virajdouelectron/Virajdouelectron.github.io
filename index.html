@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Domain Test</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        .success {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 1rem 0;
+        }
+        .details {
+            margin-top: 2rem;
+            text-align: left;
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Success!</h1>
+        <p class="success">Your custom domain is working correctly!</p>
+        <p>This page confirms that your domain configuration is properly set up.</p>
+        
+        <div class="details">
+            <p><strong>Domain:</strong> <span id="domain"></span></p>
+            <p><strong>Current URL:</strong> <span id="url"></span></p>
+            <p><strong>Page loaded at:</strong> <span id="time"></span></p>
+        </div>
+        
+        <p style="margin-top: 2rem; font-size: 0.9em; color: #7f8c8d;">
+            This is a test page. You can replace this with your actual website content.
+        </p>
+    </div>
+
+    <script>
+        // Display current domain and URL information
+        document.getElementById('domain').textContent = window.location.hostname;
+        document.getElementById('url').textContent = window.location.href;
+        document.getElementById('time').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
